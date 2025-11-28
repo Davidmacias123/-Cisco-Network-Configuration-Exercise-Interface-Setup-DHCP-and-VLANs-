@@ -67,6 +67,12 @@ no shutdown
 exit
 ```
 
+
+
+<img width="1597" height="892" alt="image" src="https://github.com/user-attachments/assets/07d847cc-9586-4b1f-8ea3-475f21d1c8c8" />
+
+
+
 ---
 
 # 2. Create Router Subinterfaces for VLANs
@@ -93,6 +99,9 @@ exit
 - `.10` and `.20` are virtual interfaces.
 - `encapsulation dot1Q` assigns each subinterface to its VLAN.
 - Each subinterface acts as the default gateway for that VLAN.
+
+
+<img width="1601" height="792" alt="image" src="https://github.com/user-attachments/assets/09308760-2da9-43d9-b309-defb6ca971e6" />
 
 ---
 
@@ -121,6 +130,7 @@ Check DHCP:
 show ip dhcp pool
 show ip dhcp binding
 ```
+<img width="912" height="576" alt="image" src="https://github.com/user-attachments/assets/20b4300c-2ff6-4020-86a8-350eeee425e5" />
 
 ---
 
@@ -162,6 +172,7 @@ switchport trunk allowed vlan 10,20
 no shutdown
 exit
 ```
+<img width="1706" height="842" alt="image" src="https://github.com/user-attachments/assets/436f6ef2-cac4-428c-8998-f51c6d4fce1f" />
 
 ---
 
@@ -176,15 +187,27 @@ Expected:
 - Gi0/0.10 UP
 - Gi0/0.20 UP
 
+<img width="917" height="133" alt="image" src="https://github.com/user-attachments/assets/4bf91911-8d04-4dae-bedc-8893388d9833" />
+
+
 ### Switch Verification
 ```
 show vlan brief
 show interfaces trunk
 ```
 
+<img width="921" height="482" alt="image" src="https://github.com/user-attachments/assets/21500408-82ff-4f6b-9b5d-d0c3b66bd836" />
+
+
+
 ### Verify DHCP on the PC
 1. Go to Desktop → IP Configuration
 2. Select DHCP
+
+<img width="882" height="647" alt="image" src="https://github.com/user-attachments/assets/a13169de-6fe2-43aa-8fd5-7f34babc911f" />
+
+---
+
 
 Expected:
 - IP: 192.168.10.x
@@ -198,17 +221,8 @@ ping 192.168.10.1
 
 Successful replies confirm a working network.
 
----
+<img width="853" height="357" alt="image" src="https://github.com/user-attachments/assets/5ede3163-e019-4ede-a185-bb65a8250685" />
 
-# Screenshots to Include in GitHub
-1. Basic router/switch setup
-2. DHCP configuration
-3. VLAN creation and port assignments
-4. Router interface summary
-5. Switch VLAN summary
-6. PC receiving DHCP address
-7. Successful ping
-8. Final network topology
 
 ---
 
